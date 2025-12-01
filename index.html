@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yorbee | Social loves you.</title>
+    <meta name="description" content="公益会社Yorbeeの公式サイト。SBCM理論に基づき、社会の方からあなたを愛しに行く新しい雇用プラットフォーム。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        :root {
+            --primary: #FF6B6B; /* 愛の赤 */
+            --secondary: #4ECDC4; /* 知性の青緑 */
+            --dark: #2C3E50;
+            --light: #F7F9FC;
+            --text: #4a4a4a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            background-color: var(--light);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+            padding: 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        .tagline {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), #FF8E53);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .sub-tagline {
+            font-size: 1.5rem;
+            color: #888;
+            margin-bottom: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--dark);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .mission-text {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* 3 Loves Grid */
+        .love-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .love-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .love-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* PBC Section */
+        .pbc-section {
+            background: white;
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            background: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+        }
+
+        /* Manifesto */
+        .manifesto {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            padding: 6rem 1rem;
+            background-image: radial-gradient(#ffe0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tagline { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+            .manifesto { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="logo">公益会社 Yorbee</div>
+        <h1 class="tagline">Social loves you.</h1>
+        <p class="sub-tagline">社会の方から、あなたを愛しに行く。</p>
+        <a href="https://yorbee-w5sboubhw6ectnxm7qjxn9.streamlit.app/" class="cta-button" target="_blank">ギルドに参加する (Demo)</a>
+    </header>
+
+    <!-- Mission -->
+    <section class="container">
+        <h2 class="section-title">設立趣意 (Mission)</h2>
+        <div class="mission-text">
+            <p>これまで、私たちは「社会に適合しなさい」と教えられてきました。<br>
+            それは、個人が巨大なシステムに合わせて、自分を削り、無理をする構造でした。</p>
+            <br>
+            <p><strong>しかし、Yorbeeは逆を提案します。</strong></p>
+            <br>
+            <p>あなたが無理をして変わる必要はありません。<br>
+            あなたの「凸凹なスキル」「隙間の時間」「小さな得意」に合わせて、<br>
+            社会の側が形を変えるのです。</p>
+            <br>
+            <p>アルゴリズムとSBCM理論は、そのために存在します。</p>
+        </div>
+    </section>
+
+    <!-- 3 Loves -->
+    <section class="container">
+        <h2 class="section-title">Yorbeeが提供する<br>3つの愛</h2>
+        <div class="love-grid">
+            <div class="love-card">
+                <span class="icon">🧩</span>
+                <h3>肯定する愛</h3>
+                <p>Acceptance</p>
+                <br>
+                <p>履歴書の空白も、苦手なことも否定しません。どんなに偏った能力でも、チームの「欠かせないピース」として肯定します。</p>
+            </div>
+            <div class="love-card">
+                <span class="icon">🛡️</span>
+                <h3>守る愛</h3>
+                <p>Protection</p>
+                <br>
+                <p>SBCM監査アルゴリズムが、搾取しようとする「ブラック案件」を物理的に弾き返します。やりがい搾取をシステムが許しません。</p>
+            </div>
+            <div class="love-card">
+                <span class="icon">🤝</span>
+                <h3>繋がる愛</h3>
+                <p>Connection</p>
+                <br>
+                <p>一人ではできないことも、誰かと一緒なら成し遂げられる。孤独な労働者をギルドで繋ぎ、報酬と共に喜びを分配します。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Public Benefit Corp -->
+    <section class="container">
+        <div class="pbc-section">
+            <h2 class="section-title">なぜ「公益会社」なのか？</h2>
+            <p>Yorbeeは、利益の最大化（株主のための経営）を目指しません。<br>
+            もし単なる営利企業になれば、アルゴリズムを書き換えて手数料を上げる誘惑に駆られるでしょう。</p>
+            <br>
+            <p>だからこそ、私たちは<strong>「公益会社 (Public Benefit Corporation)」</strong>を選択します。</p>
+            <br>
+            <ul style="list-style: none; margin-top: 1rem;">
+                <li>📈 <strong>目的:</strong> 地域内残留率 (<span class="math">R<sub>block</sub></span>) の最大化と、市民の幸福総量 (<span class="math">H<sub>total</sub></span>) の向上。</li>
+                <li>🔓 <strong>ガバナンス:</strong> アルゴリズムはオープンソース化し、透明性を担保。</li>
+                <li>💰 <strong>収益:</strong> システム維持費のみを徴収。余剰分はユーザーへ還元。</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="manifesto">
+        <p>もう、社会のために自分を殺さなくていい。</p>
+        <p>これからは、Yorbee（社会）があなたのために汗をかく。</p>
+        <br>
+        <p>不完全なままで、生きていこう。</p>
+        <br>
+        <p style="font-size: 2.5rem; margin-top: 2rem;">Social loves you.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Public Benefit Corporation Yorbee</p>
+        <br>
+        <a href="https://github.com/your-name/Yorbee" target="_blank">GitHub Repository</a>
+        <a href="https://doi.org/10.5281/zenodo.17762960" target="_blank">SBCM Theory</a>
+        <br><br>
+        <small>Powered by SBCM Economics & GovTech</small>
+    </footer>
+
+</body>
+</html>
